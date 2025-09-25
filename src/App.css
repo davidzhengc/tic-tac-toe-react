@@ -1,7 +1,7 @@
 
 .tic-tac-toe-container{
   display: flex;
-  justify-content: center;
+  justify-content:start;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -9,9 +9,16 @@
   background:rgb(61, 61, 61);
 }
 
-.tic-tac-toe-container h1 {
+h1 {
     font-size:45px;
-    color:darkgray
+    color:white;
+}
+
+h2 {
+    font-size:25px;
+    color:lightgray;
+    margin-top:-15px;
+    margin-bottom:20px;
 }
 
 .board{
@@ -24,17 +31,47 @@
   width: 145px;
   height: 145px;
   border: 1px solid #666;
-  background-color: #e0e0e0;
+  background-color: #969696;
+  color:white;
   cursor: pointer;
   font-size: 80px;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .square:hover {
-  background-color: #f0f0f0;
+  background-color: #afafaf;
   border-color: #666;
 }
 
+.x {
+    color: #ff4d4d;
+}
+
+.o {
+    color: #4d79ff;
+}
+
 .square:active {
-  background-color: #d4edff;
+  background-color: #ffffff;
+}
+
+.gameButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width:300px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background:none;
+    color: black;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.gameButton:hover {
+    background-color: black;
+    color: white;
 }
