@@ -1,8 +1,14 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import "./App.css";
+import MainMenu from "./components/MainMenu";
 import Board from "./components/Board";
 
+type GameView = "menu" | "game";
+type GameMode = "1p" | "2p";
+type Difficulty = "easy" | "medium" | "hard";
+
 function App() {
+  const [currentView, setCurrentView] = useState<GameView>("menu");
   const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
@@ -46,6 +52,20 @@ function App() {
     setXIsNext(true);
   };
 
+  const startGame = () => {
+    setCurrentView("game");
+    resetGame();
+  };
+
+  const goToMenu = () => {
+    setCurrentView("menu");
+  };
+
+  // Render different views based on currentView state
+  if (currentView === "menu") {
+    return <MainMenu onStartGame={startGame} />;
+  }
+
   return (
     <div className="tic-tac-toe-container">
       <h1> Tic Tac Toe </h1>
@@ -69,10 +89,10 @@ function App() {
       </button>
       <button
         className="gameButton"
-        onClick={resetGame}
+        onClick={goToMenu}
         style={{ marginTop: "20px" }}
       >
-        Go back to Menu
+        Go Back To Menu
       </button>
     </div>
   );
