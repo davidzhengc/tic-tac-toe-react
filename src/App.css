@@ -38,7 +38,39 @@
   transform: translateY(-2px);
 }
 
-/* ...existing code... */
+.difficulty-menu h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.difficulty-easy {
+  background: rgba(76, 175, 80, 0.8);
+}
+
+.difficulty-medium {
+  background: rgba(255, 152, 0, 0.8);
+}
+
+.difficulty-impossible {
+  background: rgba(244, 67, 54, 0.8);
+}
+
+.difficulty-back {
+  background: rgba(158, 158, 158, 0.8);
+  margin-top: 1rem;
+}
+
+.difficulty-easy:hover {
+  background: rgba(76, 175, 80, 0.9) !important;
+}
+
+.difficulty-medium:hover {
+  background: rgba(255, 152, 0, 0.9) !important;
+}
+
+.difficulty-impossible:hover {
+  background: rgba(244, 67, 54, 0.9) !important;
+}
 
 .tic-tac-toe-container{
   display: flex;

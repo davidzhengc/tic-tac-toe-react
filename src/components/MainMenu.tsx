@@ -2,7 +2,7 @@ import { useState } from "react";
 interface MainMenuProps {
   onStartGame: (
     mode: "1p" | "2p",
-    difficulty?: "normal" | "impossible"
+    difficulty?: "easy" | "medium" | "impossible"
   ) => void;
 }
 
@@ -30,10 +30,16 @@ const MainMenu = ({ onStartGame }: MainMenuProps) => {
           <h2>Select Difficulty</h2>
           <div className="menu-buttons">
             <button
-              className="menu-button difficulty-normal"
-              onClick={() => onStartGame("1p", "normal")}
+              className="menu-button difficulty-easy"
+              onClick={() => onStartGame("1p", "easy")}
             >
-              Normal
+              Easy
+            </button>
+            <button
+              className="menu-button difficulty-medium"
+              onClick={() => onStartGame("1p", "medium")}
+            >
+              Medium
             </button>
             <button
               className="menu-button difficulty-impossible"
