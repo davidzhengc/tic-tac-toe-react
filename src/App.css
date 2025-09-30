@@ -128,7 +128,7 @@ button.square.o {
   background-color: rgba(107, 109, 207, 1);
 }
 
-.gameButton {
+.game-button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -139,11 +139,13 @@ button.square.o {
     border: 2px solid #764ba2;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
-.gameButton:hover {
-    background-color: #8f5de8;
-    color: #fff;
-    border-color: #667eea;
+.game-button:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
 }

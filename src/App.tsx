@@ -237,14 +237,14 @@ function App() {
         }}
       />
       <button
-        className="gameButton"
+        className="game-button"
         onClick={resetGame}
         style={{ marginTop: "20px" }}
       >
         Reset Game
       </button>
       <button
-        className="gameButton"
+        className="game-button"
         onClick={goToMenu}
         style={{ marginTop: "20px" }}
       >
