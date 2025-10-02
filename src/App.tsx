@@ -8,7 +8,7 @@ type GameMode = "1p" | "2p";
 type Difficulty = "easy" | "medium" | "impossible";
 
 // Game logic functions
-function checkForWinner(squares: Array<string | null>) {
+function checkForWinner(squares: (string | null)[]) {
   const winningLines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -28,7 +28,7 @@ function checkForWinner(squares: Array<string | null>) {
   return null;
 }
 
-const getRandomMove = (squares: Array<string | null>) => {
+const getRandomMove = (squares: (string | null)[]) => {
   const availableMoves = squares
     .map((square, index) => (square === null ? index : null))
     .filter((val) => val !== null) as number[];
