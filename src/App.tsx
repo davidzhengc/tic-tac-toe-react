@@ -236,18 +236,10 @@ function App() {
           setXIsNext(!xIsNext);
         }}
       />
-      <button
-        className="game-button"
-        onClick={resetGame}
-        style={{ marginTop: "20px" }}
-      >
+      <button className="game-button" onClick={resetGame}>
         Reset Game
       </button>
-      <button
-        className="game-button"
-        onClick={goToMenu}
-        style={{ marginTop: "20px" }}
-      >
+      <button className="game-button" onClick={goToMenu}>
         Go Back To Menu
       </button>
     </div>
