@@ -50,13 +50,13 @@ This project helped me learn:
 ```
 src/
 ├── components/
-│ ├── Board/ # Game board component
-│ ├── Square/ # Individual square component
+│ ├── Board/    # Game board component
+│ ├── Square/   # Individual square component
 │ └── MainMenu/ # Main menu with game options
-├── utils/
-│ └── gameLogic.ts # Pure game logic functions
-├── App.tsx # Main application component
-└── main.tsx # Application entry point
+├── App.css     # Main application styles
+├── index.css   # Global styles and CSS reset
+├── App.tsx     # Main application component
+└── main.tsx    # Application entry point
 ```
 
 ## 🚀 Getting Started
