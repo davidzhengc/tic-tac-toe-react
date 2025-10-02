@@ -30,7 +30,7 @@ function checkForWinner(squares: Array<string | null>) {
 
 const getRandomMove = (squares: Array<string | null>) => {
   const availableMoves = squares
-    .map((squares, index) => (squares === null ? index : null))
+    .map((square, index) => (square === null ? index : null))
     .filter((val) => val !== null) as number[];
   const randomIndex = Math.floor(Math.random() * availableMoves.length);
   return availableMoves[randomIndex];
